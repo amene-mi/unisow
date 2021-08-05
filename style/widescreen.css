@@ -1,0 +1,422 @@
+* {
+   box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'content'
+        'footer' ;
+    /* grid-template-columns: 100vw; */
+    grid-template-columns: 100%;
+    grid-template-rows: 9vh auto 15vh;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    grid-area: header;
+    box-shadow: 0 3px 5px #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-inline: 10%;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px 0 15px;
+    padding: 0 0 0 0;
+}
+a {
+    text-decoration: none;
+    color: black; 
+}
+.mobile-burger-menu{
+    display: none;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    background:  limegreen;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    margin-left: 0;
+ }
+  
+ nav ul li > a:hover ~ .dot {
+  opacity: 1;
+  margin-left: 45%;
+}
+
+.btn-style {
+    background-color: limegreen;
+    color: white;
+    padding: 10px;
+    border-radius: 0.5em;
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.11), 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+}
+
+/***************************************************/
+.content {
+    grid-area: content;
+ }
+
+ .banner {
+    position: absolute;
+    top: 122px;
+    z-index: -1;
+ }
+ .campaign-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:no-repeat center url("/images/campaign-banner.jpg") ;
+    background-size: cover;
+    height: 230px;
+ }
+ .campaign-banner .title { 
+    position: absolute;
+    z-index: 2;
+    color: white;
+ }
+.green{
+    color: limegreen;
+}
+.title #white{
+    padding-left: 8%;
+}
+
+ .banner img {
+     max-width: 100%;
+     height: auto;
+ }
+ 
+main {
+    padding-inline: 10%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* row */
+    align-items: center; /* justify-content: center */
+}
+.main {
+    flex-direction: row; /* row */
+    align-items: flex-start; /* justify-content: center */
+}
+
+.main-content {
+    width: 330px;;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    z-index: 0;
+}
+
+.main-button {  
+    background-color: white;
+    color: limegreen;
+    border: 2px solid limegreen;
+    border-radius: 0.5em;
+    padding: 8px;
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.11), 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+}
+aside{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar{
+    padding: 20px;
+    background-color: white;
+    margin: 15px;  
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.col-5 {
+    flex: 0 1 auto;
+    flex-direction: row;
+    width: 40%;
+    padding-top: 5%;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.pos-relative {
+    position: relative;
+}
+
+.col-5 img{
+    max-width :90%;
+    margin-bottom: 120px;
+    height: auto;
+}
+img.Round_Left{
+    position: absolute;
+    max-width :450px;
+    z-index: -1;
+    margin-left: -420px;
+    height: auto;
+}
+img.Round_Right{
+    position: absolute;
+    max-width :450px;
+    z-index: -1;
+    right: -330px;
+    height: auto;
+}
+/*
+.right-img {
+    background-image: url(../images/Round-Shape.svg);
+    background-size: contain;
+    background-position-x: 100px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+*/
+
+.col-7 {
+    flex: 0 1 auto;
+    width: 60%;
+}
+
+.col-7>h1{
+    margin-top: 60px;
+}
+.even{
+    margin-left: 35px;
+}
+.col-7 img{
+    position: absolute;
+    max-width :52%;
+    z-index: -1;
+    margin-left: -50px;
+    height: auto;
+}
+.odd {
+    margin-right: 35px;
+    }
+
+.actions{
+    margin-top: 35px;
+}
+.col-4{
+    flex: 0 1 auto;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    margin: 15px 0;
+}
+.col-4 img{
+    border-start-start-radius: 1.2em;
+    border-start-end-radius: 1.2em;
+}
+.box{
+    box-shadow: 0 1px 25px -10px gray;
+    border-radius: 1.2em;
+  }
+  .padding{
+      padding-top: 18px ;
+  }
+progress {
+    border: none;
+    width: 100%;
+    height: 8px;
+  }
+.Donation{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.box.Donation.sidebar{
+ margin-top: 32%;
+}
+.Donation div{
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 14%;
+}
+.Donation progress
+{
+    height: 4px;
+}
+  progress::-moz-progress-bar {
+    background:rgb(206, 216, 206);
+    border-radius: 100em;
+  }
+  
+  progress::-webkit-progress-value {
+    background: rgb(36, 153, 55);
+    border-radius: 100em;
+  }
+  
+  progress::-webkit-progress-bar {
+    background:rgb(206, 216, 206);
+    border-radius: 100em;
+  }
+.card-text{
+    font-size: 12px;
+    color: gray;
+    padding: 5px 0px;
+    display: inherit;
+    align-items:center;
+}
+.card-text span {
+    display: inherit;
+    align-items:center;
+}
+.card-text a{
+    padding-left: 5% ;
+}
+.card-btn{
+    color: white;
+    background-color: limegreen;
+    border: 0px;
+    padding: 10px 20px;
+    border-radius: 0.8em;
+    box-shadow: 0 1px 25px -10px limegreen;
+}
+
+.col-11{
+    flex: 0 1 auto;
+    width :80%;
+    padding: 0;
+    margin: 0;
+    font-size: 2em;;
+}
+.col-1{
+    flex: 0 1 auto;
+    width :20%;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+.col-1 img {
+height: auto;
+} 
+
+.col-2{  
+    width :15%;
+    text-align: center;
+    margin: 10px 0 70px 0;
+    border: 2px solid gray;
+    border-radius: 0.5em;
+}
+
+.col-2 img{
+    max-width: 60%;
+    height: auto;
+    padding: 30px 0 30px 0;
+}
+/**************************************************/
+footer {
+    grid-area: footer;
+    border-top: 2px solid gray;
+    padding-inline: 10%;
+}
+
+footer ul>li{
+    margin: 20px 20px 10px 20px;
+}
+footer div{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid gray;
+    justify-content: space-between;
+}
+.text{
+    font-size: 12px;
+    color: gray;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+}
+footer span>a{
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 50px;
+    }
+    footer span>a>img{
+        margin-top: 15px;
+        }
+/**************************************************/
+@media only screen and (max-width: 768px) {
+    .col-4{
+        
+        width: 43%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: white;
+        margin: 15px;
+    }
+    .box.Donation.sidebar{
+        margin-top: 22%;
+    }
+    main {
+        padding-inline: 2%;
+    }
+    .main-content{
+        height: 350px;
+    }
+    aside{
+        width: 43%;
+        display: flex;
+        flex-direction: column;
+    }
+    footer {
+        grid-area: footer;
+        border-top: 2px solid gray;
+        padding-inline: 5%;
+    }
+    
+    footer ul>li{
+        margin: 20px 10px 5px 10px;
+    }
+    footer div{
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px solid gray;
+        justify-content: space-between;
+    }
+    .text{
+        font-size: 12px;
+        color: gray;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        border-bottom: none;
+    }
+    footer span>a{
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        margin-bottom: 50px;
+        }
+        footer span>a>img{
+            margin-top: 15px;
+            }
+}
